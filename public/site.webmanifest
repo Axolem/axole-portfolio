@@ -1,0 +1,68 @@
+{
+    "name": "Axole Maranjana | Technopreneur & Full-Stack Developer",
+    "short_name": "AxoleM",
+    "description": "Portfolio of Axole Maranjana - C# & React Native Developer | PipAlert Creator | Automation Specialist | Open-Source Contributor",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#1E40AF",
+    "background_color": "#1E3A8A",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/?source=pwa",
+    "orientation": "portrait-primary",
+    "categories": ["technology", "software", "development"],
+    "lang": "en-ZA",
+    "dir": "ltr",
+    "screenshots": [
+      {
+        "src": "/screenshots/desktop.png",
+        "sizes": "1280x720",
+        "type": "image/png",
+        "form_factor": "wide"
+      },
+      {
+        "src": "/screenshots/mobile.png",
+        "sizes": "750x1334",
+        "type": "image/png",
+        "form_factor": "narrow"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "Projects",
+        "short_name": "Work",
+        "description": "View Axole's development projects",
+        "url": "/projects"
+      },
+      {
+        "name": "Contact",
+        "short_name": "Hire",
+        "description": "Get in touch with Axole",
+        "url": "/contact"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=com.pipalert.app",
+        "id": "com.pipalert.app"
+      }
+    ]
+  }

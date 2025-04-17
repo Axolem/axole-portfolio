@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://axole.dotenv.co.za/sitemap.xml
+
+# Crawl-delay for busy periods
+Crawl-delay: 10
+
+# Block AI scrapers
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: GPTBot
+Disallow: /
