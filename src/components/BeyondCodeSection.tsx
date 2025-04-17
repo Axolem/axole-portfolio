@@ -31,7 +31,7 @@ const hobbies = [
 export const BeyondCodeSection = () => {
   return (
     <section
-      id="beyond-code"
+      id="interests"
       className="py-20 px-6 bg-gradient-to-b from-secondary/10 to-background"
     >
       <div className="max-w-6xl mx-auto">
