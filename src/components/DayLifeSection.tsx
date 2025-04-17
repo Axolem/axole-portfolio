@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { Clock, Code, Coffee, Book, Terminal, Moon, Sun } from "lucide-react";
 

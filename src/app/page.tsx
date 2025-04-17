@@ -4,8 +4,8 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { StorySection } from "@/components/StorySection";
 import { EducationSection } from "@/components/EducationSection";
 import { TechStackSection } from "@/components/TechStackSection";
-// import { BeyondCodeSection } from "@/components/BeyondCodeSection";
-// import { DayLifeSection } from "@/components/DayLifeSection";
+import { BeyondCodeSection } from "@/components/BeyondCodeSection";
+import { DayLifeSection } from "@/components/DayLifeSection";
 
 export default function HomePage() {
   const projects = [
@@ -57,8 +57,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* <DayLifeSection /> */}
-      {/* <BeyondCodeSection /> */}
+      <DayLifeSection />
+      <BeyondCodeSection />
 
       {/* Contact Section */}
       <section
