@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/HeroSection";
 // import { ProjectCard } from "@/components/ProjectCard";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { StorySection } from "@/components/StorySection";
-// import { EducationSection } from "@/components/EducationSection";
+import { EducationSection } from "@/components/EducationSection";
 import { TechStackSection } from "@/components/TechStackSection";
 // import { BeyondCodeSection } from "@/components/BeyondCodeSection";
 // import { DayLifeSection } from "@/components/DayLifeSection";
@@ -38,7 +38,7 @@ export default function HomePage() {
       <StorySection />
       <ExperienceSection />
       <TechStackSection />
-      {/* <EducationSection /> */}
+      <EducationSection />
 
       {/* Projects Section */}
       <section

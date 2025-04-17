@@ -1,5 +1,4 @@
 import { GraduationCap, Award } from "lucide-react";
-import { motion } from "framer-motion";
 
 interface Education {
   school: string;
@@ -49,16 +48,19 @@ export const EducationSection = () => {
         </h2>
         <div className="grid gap-8">
           {educationData.map((edu, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-              className="p-6 rounded-xl bg-secondary/40 backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all"
+              className={`p-6 rounded-xl bg-secondary/40 backdrop-blur-sm border ${
+                index === 0
+                  ? "border-purple-400/40 shadow-md shadow-purple-500/10"
+                  : "border-purple-500/20"
+              } hover:border-purple-500/40 transition-all transform duration-500 ease-out animate-fade-in-up`}
+              style={{
+                animationDelay: `${index * 0.1}s`,
+                animationFillMode: "both",
+              }}
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col sm:flex-row items-start gap-4">
                 <div className="p-3 rounded-lg bg-purple-500/10">
                   <GraduationCap className="text-purple-400" size={24} />
                 </div>
@@ -80,7 +82,10 @@ export const EducationSection = () => {
                         GPA: {edu.gpa}
                       </p>
                       {parseFloat(edu.gpa) >= 75 && (
-                        <div className="flex items-center gap-1 px-2 py-0.5 bg-purple-500/20 rounded-full">
+                        <div
+                          title="Awarded for GPA above 75%"
+                          className="flex items-center gap-1 px-2 py-0.5 bg-purple-500/20 rounded-full cursor-help"
+                        >
                           <Award className="text-yellow-400 h-3.5 w-3.5" />
                           <span className="text-xs text-yellow-400 font-medium">
                             Distinction
@@ -100,7 +105,7 @@ export const EducationSection = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
