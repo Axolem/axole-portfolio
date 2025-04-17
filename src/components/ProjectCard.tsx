@@ -1,5 +1,4 @@
 import { ExternalLink, Github } from "lucide-react";
-import { motion } from "framer-motion";
 import {
   HoverCard,
   HoverCardContent,
@@ -21,14 +20,10 @@ export const ProjectCard = ({
   tags,
   githubUrl,
   liveUrl,
-  // imageUrl,
-}: ProjectCardProps) => {
+}: // imageUrl,
+ProjectCardProps) => {
   return (
-    <motion.div
-      whileHover={{ y: -5 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      className="group relative bg-secondary/40 backdrop-blur-sm rounded-xl border border-purple-500/20 overflow-hidden hover:border-purple-500/40 transition-all duration-300"
-    >
+    <div className="group relative bg-secondary/40 backdrop-blur-sm rounded-xl border border-purple-500/20 overflow-hidden hover:border-purple-500/40 transition-all duration-300 hover:animate-hover-float">
       <div className="p-6">
         <HoverCard>
           <HoverCardTrigger>
@@ -77,6 +72,6 @@ export const ProjectCard = ({
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };

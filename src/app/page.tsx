@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/HeroSection";
-// import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectCard } from "@/components/ProjectCard";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { StorySection } from "@/components/StorySection";
 import { EducationSection } from "@/components/EducationSection";
@@ -8,29 +8,29 @@ import { TechStackSection } from "@/components/TechStackSection";
 // import { DayLifeSection } from "@/components/DayLifeSection";
 
 export default function HomePage() {
-  // const projects = [
-  //   {
-  //     title: "PipAlert",
-  //     description:
-  //       "Forex trading app offering real-time signal alerts, subscriber management, and secure transactions for traders of all levels.",
-  //     tags: ["React Native", "Node.js", "Firebase"],
-  //     liveUrl: "https://play.google.com/store/apps/details?id=com.pipalert",
-  //   },
-  //   {
-  //     title: "Power Automate Scripts",
-  //     description:
-  //       "Automation scripts for tracking assessment deadlines, generating HTML tables, and email notifications.",
-  //     tags: ["Power Automate", "JavaScript", "API Integration"],
-  //     githubUrl: "https://github.com/Axolem",
-  //   },
-  //   {
-  //     title: "Payment Gateway Libraries",
-  //     description:
-  //       "React Native libraries for PayFast and Ozow payment gateway integrations.",
-  //     tags: ["React Native", "TypeScript", "Payment Integration"],
-  //     githubUrl: "https://github.com/Axolem",
-  //   },
-  // ];
+  const projects = [
+    {
+      title: "PipAlert",
+      description:
+        "Forex trading app offering real-time signal alerts, subscriber management, and secure transactions for traders of all levels.",
+      tags: ["React Native", "Node.js", "Firebase"],
+      liveUrl: "https://play.google.com/store/apps/details?id=com.pipalert",
+    },
+    {
+      title: "Power Automate Scripts",
+      description:
+        "Automation scripts for tracking assessment deadlines, generating HTML tables, and email notifications.",
+      tags: ["Power Automate", "JavaScript", "API Integration"],
+      githubUrl: "https://github.com/Axolem",
+    },
+    {
+      title: "Payment Gateway Libraries",
+      description:
+        "React Native libraries for PayFast and Ozow payment gateway integrations.",
+      tags: ["React Native", "TypeScript", "Payment Integration"],
+      githubUrl: "https://github.com/Axolem",
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-background">
@@ -50,9 +50,9 @@ export default function HomePage() {
             Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* {projects.map((project, index) => (
+            {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
-            ))} */}
+            ))}
           </div>
         </div>
       </section>
