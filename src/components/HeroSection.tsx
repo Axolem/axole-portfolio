@@ -11,7 +11,7 @@ export const HeroSection = () => {
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-purple-800/5 blur-[120px] animate-pulse-slow" />
       </div>
 
-      <div className="max-w-6xl mx-auto w-full pt-32 md:pt-20 z-10">
+      <div className="max-w-6xl mx-auto w-full z-10">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
           <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-purple-500/20 shadow-lg flex-shrink-0 relative scale-90 opacity-0 animate-fade-in-scale" >
             <Image
