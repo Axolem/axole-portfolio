@@ -14,7 +14,7 @@ export default function HomePage() {
       description:
         "Forex trading app offering real-time signal alerts, subscriber management, and secure transactions for traders of all levels.",
       tags: ["React Native", "Node.js", "Firebase"],
-      liveUrl: "https://play.google.com/store/apps/details?id=com.pipalert",
+      liveUrl: "https://play.google.com/store/apps/details?id=com.axole.pipalert",
     },
     {
       title: "Power Automate Scripts",
