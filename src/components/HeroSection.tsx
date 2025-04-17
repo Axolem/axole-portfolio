@@ -61,7 +61,7 @@ export const HeroSection = () => {
               </RouterLink>
 
               <RouterLink
-                href="mailto:contact@axolemaranjana.com"
+                href="mailto:axolemaranjana4@gmail.com"
                 className="p-2 rounded-full hover:bg-purple-500/20 transition-colors"
                 aria-label="Email Contact"
               >
