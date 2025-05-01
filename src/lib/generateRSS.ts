@@ -1,3 +1,5 @@
+import "server-only"
+
 import type { Post } from "./blog";
 
 // Helper function to escape XML special characters

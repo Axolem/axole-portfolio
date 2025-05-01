@@ -2,19 +2,19 @@
 
 import { toast } from "sonner";
 import { Rss } from "lucide-react";
-
-import { Post } from "@/lib/blog";
-import { generateRSS } from "@/lib/generateRSS";
 import { Button } from "@/components/ui/button";
 
-export const RSSFeed = (blogPosts: Post[]) => {
-  const downloadRSS = () => {
+export const RSSFeed = () => {
+  const downloadRSS = async () => {
     try {
-      // Generate RSS content
-      const rssContent = generateRSS(blogPosts);
+      const res = await fetch("/api/rss.xml");
 
-      // Create blob and download link
-      const blob = new Blob([rssContent], { type: "application/xml" });
+      if (!res.ok) {
+        throw new Error("Failed to get rss at the moment.");
+      }
+
+      const blob = await res.blob();
+
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
