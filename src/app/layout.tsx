@@ -1,8 +1,11 @@
 import "./globals.css";
+
 import type { Metadata } from "next";
+
 import { inter } from "./fonts";
-import { KonamiCode } from "@/components/KonamiCode";
 import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/sonner";
+import { KonamiCode } from "@/components/KonamiCode";
 import { FloatingNav } from "@/components/FloatingNav";
 
 const meta = {
@@ -108,6 +111,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <FloatingNav />
+        <Toaster position="top-center" />
       </body>
     </html>
   );
