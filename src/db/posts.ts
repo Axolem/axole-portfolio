@@ -1,7 +1,9 @@
 import "server-only";
+
 import { db } from ".";
-import { blogComment, blogLikes } from "../schema";
 import { eq } from "drizzle-orm";
+
+import { blogComment, blogLikes } from "../schema";
 
 export const likePost = async (slug: string) => {
   const currentLikes = await getPostLikes(slug);
@@ -20,6 +22,16 @@ export const likePost = async (slug: string) => {
     .where(eq(blogLikes.slug, slug));
 };
 
+export const likePostComment = async (id: number) => {
+  const currentLikes = await getPostCommentLikes(id);
+    await db
+    .update(blogComment)
+    .set({
+      likesCount: currentLikes + 1,
+    })
+    .where(eq(blogComment.id, id));
+};
+
 export const getPostLikes = async (slug: string) => {
   const postLikes = await db
     .select()
@@ -28,11 +40,19 @@ export const getPostLikes = async (slug: string) => {
   return postLikes?.at(0)?.count || 0;
 };
 
+export const getPostCommentLikes = async (id: number) => {
+  const postLikes = await db
+    .select()
+    .from(blogComment)
+    .where(eq(blogComment.id, id));
+  return postLikes?.at(0)?.likesCount || 0;
+};
+
 export const commentPost = async (slug: string, comment: string) => {
   return await db.insert(blogComment).values({
     comment,
     slug,
-    createdAt: Date.now(),
+    createdAt: new Date(),
   });
 };
 

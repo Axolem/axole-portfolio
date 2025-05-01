@@ -8,8 +8,12 @@ export function cn(...inputs: ClassValue[]) {
 export const fetcher = (url: string) =>
   fetch(url).then(async (r) => await r.json());
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const mutator = (url: string, data?: any) =>
-  fetch(url, { method: "POST", body: JSON.stringify(data) }).then(
-    async (r) => await r.json()
-  );
+ 
+export const mutator = (url: string, { arg }: { arg?: { comment: string } }) =>
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(arg),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(async (r) => await r.json());
