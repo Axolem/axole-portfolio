@@ -1,12 +1,16 @@
+"use client";
+
 import { toast } from "sonner";
 import { Rss } from "lucide-react";
 
-import { blogPosts } from "@/data/blogPosts";
-
+import { Post } from "@/lib/blog";
 import { generateRSS } from "@/lib/generateRSS";
 import { Button } from "@/components/ui/button";
 
-export const RSSFeed = () => {
+export const RSSFeed = (blogPosts: Post[]) => {
+
+  return <></>
+
   const downloadRSS = () => {
     try {
       // Generate RSS content
@@ -26,7 +30,7 @@ export const RSSFeed = () => {
       toast.success("RSS Feed Downloaded", {
         description: "The RSS feed has been successfully downloaded.",
       });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error("Download Failed", {
         description: "There was an error generating the RSS feed.",
