@@ -1,10 +1,10 @@
 import fs from "fs";
-import path, { join } from "path";
 import matter from "gray-matter";
+import path, { join } from "path";
 
 const postsDirectory = path.join(process.cwd(), "/src/data/blogs");
 
-export function getPostSlugs() {
+function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
@@ -18,16 +18,19 @@ export async function getAllPosts(): Promise<Post[] | null> {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  if(!slug || !slug.endsWith('.md')) return null;
+
+  if (!slug || !slug.endsWith(".md")) return null;
+
   const realSlug = slug.replace(/\.md$/, "");
+
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as Post;
+  return { ...data, content } as Post;
 }
 
-export type Author = {
+type Author = {
   name: string;
   image: string;
   url?: string;

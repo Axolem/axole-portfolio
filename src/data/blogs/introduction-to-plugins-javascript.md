@@ -7,6 +7,7 @@ tags: ["React Native", "Firebase", "FinTech", "Mobile Development"]
 readingTime: 8
 author:
     name: Axole Maranjana
+    url: "/"
 ---
 
 # Building PipAlert: A Journey in FinTech App Development
@@ -59,3 +60,11 @@ Building PipAlert taught me valuable lessons about:
 Whether you're building a financial app or any mobile application, I hope these insights help in your development journey.
 
 Feel free to reach out with questions about React Native development or FinTech solutions!
+
+
+
+```javascript file=test.js
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+```

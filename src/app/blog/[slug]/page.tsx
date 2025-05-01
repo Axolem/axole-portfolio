@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 
-import { blogPosts } from "@/data/blogPosts";
+import { getPostBySlug } from "@/lib/blog";
 import { formatDate } from "@/lib/formatDate";
 import { BlogLike } from "@/components/BlogLike";
 import { Markdown } from "@/components/Markdown";
@@ -13,7 +14,7 @@ import { BackgroundEffects } from "@/components/BackgroundEffects";
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
 
-  const post = blogPosts.find((post) => post.slug === slug);
+  const post = await getPostBySlug(`${slug}.md`);
 
   if (!post) {
     return (
@@ -36,20 +37,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             href="/blog"
             className="inline-flex items-center mb-6 text-purple-400 hover:text-purple-300"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="mr-2"
-            >
-              <path d="m15 18-6-6 6-6"></path>
-            </svg>
+            <ArrowLeft />
             Back to all posts
           </Link>
 
