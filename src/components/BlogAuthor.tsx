@@ -1,6 +1,7 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { User } from "lucide-react";
 import Link from "next/link";
+import { User } from "lucide-react";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 interface BlogAuthorProps {
   author: {
@@ -17,12 +18,6 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = ({
   date,
   showBio = false,
 }) => {
-  // const initials = author.name
-  //   .split(' ')
-  //   .map(name => name[0])
-  //   .join('')
-  //   .toUpperCase();
-
   return (
     <div className="flex items-center gap-3">
       <Avatar className="border border-gray-700 w-10 h-10">
@@ -37,6 +32,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = ({
       <div>
         <Link
           href={`/blog?author=${encodeURIComponent(author.name)}`}
+          scroll={false}
           className="font-medium text-white hover:text-purple-300 transition-colors"
         >
           {author.name}

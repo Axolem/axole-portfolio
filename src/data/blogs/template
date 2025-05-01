@@ -1,0 +1,69 @@
+---
+slug: "your-blog-post-slug-here"
+title: "Your Blog Post Title Here"
+date: "YYYY-MM-DD"
+excerpt: "A concise summary of your blog post, typically one or two sentences."
+tags: ["tag1", "tag2", "tag3"]
+readingTime: # Estimated reading time in minutes (integer)
+author:
+  name: "Axole Maranjana"
+  image: "/axole-maranjana.jpg"
+  url: "/"
+ogImage: 
+  url: ""
+keywords: []
+---
+
+# Your Main Blog Post Title
+
+Start writing your blog post content here. Use Markdown for formatting.
+
+## Headings
+
+Use `##` for subheadings, `###` for sub-subheadings, and so on.
+
+## Paragraphs
+
+Simply type your text. Newlines create new paragraphs.
+
+This is the first paragraph.
+
+This is the second paragraph.
+
+## Lists
+
+### Unordered Lists
+
+Use hyphens, asterisks, or plus signs:
+
+* Item 1
+* Item 2
+  * Nested item 2.1
+  * Nested item 2.2
+* Item 3
+
+### Ordered Lists
+
+Use numbers followed by a period:
+
+1. First item
+2. Second item
+3. Third item
+
+## Links
+
+[Link Text](https://www.example.com)
+
+## Images
+
+![Alt text for the image](/path/to/your/image.jpg)
+
+## Code Blocks
+
+Use triple backticks for code blocks:
+
+```javascript
+// Example JavaScript code
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
