@@ -8,9 +8,6 @@ import { generateRSS } from "@/lib/generateRSS";
 import { Button } from "@/components/ui/button";
 
 export const RSSFeed = (blogPosts: Post[]) => {
-
-  return <></>
-
   const downloadRSS = () => {
     try {
       // Generate RSS content
