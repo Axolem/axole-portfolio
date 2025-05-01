@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
-import { getPostBySlug } from "@/lib/blog";
 import { formatDate } from "@/lib/formatDate";
 import { BlogLike } from "@/components/BlogLike";
 import { Markdown } from "@/components/Markdown";
 import { BlogAuthor } from "@/components/BlogAuthor";
+import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { BlogComments } from "@/components/BlogComments";
 import { BlogNewsletter } from "@/components/BlogNewsletter";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
@@ -98,3 +100,36 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 };
 
 export default page;
+
+export async function generateStaticParams(): Promise<any[]> {
+  const posts = await getAllPosts();
+
+  return posts?.map((post) => ({
+    slug: post.slug,
+  })) as any;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const post = await getPostBySlug((await params).slug);
+
+  console.log("HHHHH: ", post)
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  return {
+    title: `${post.title}`,
+    description: post.excerpt.substring(0, 155), // Ensure it's within 160 characters
+    authors: [{ name: post.author.name, url: post.author.url }],
+    keywords: [
+      ...post.keywords,
+    ],
+  };
+}

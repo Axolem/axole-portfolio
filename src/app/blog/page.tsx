@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { BlogHome } from "@/components/BlogHome";
 import { getAllPosts, type Post } from "@/lib/blog";
+
+export const metadata: Metadata = {
+  creator: "Axole Maranjana",
+  category: "blog",
+  title: " Blog",
+};
 
 const page = async ({
   searchParams,
@@ -11,13 +18,11 @@ const page = async ({
   let posts: Post[] | undefined = data;
 
   if (author) {
-    posts = data?.filter(
-      (p) =>{
-        console.log(p?.author?.name?.toLowerCase(), author?.toLowerCase())
-        return p?.author?.name?.toLowerCase() === author?.toLowerCase()}
-    );
+    posts = data?.filter((p) => {
+      return p?.author?.name?.toLowerCase() === author?.toLowerCase();
+    });
   }
-  
+
   if (tag) {
     posts = data?.filter((p) => p?.tags?.includes(tag));
   }

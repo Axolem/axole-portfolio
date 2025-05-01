@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -56,29 +57,29 @@ export const KonamiCode = () => {
           animate={{ opacity: 1, scale: 1, rotate: [0, 10, -10, 10, 0] }}
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 flex items-center justify-center z-50 bg-black/70"
+          className="z-50 fixed inset-0 flex justify-center items-center bg-black/70"
           onClick={() => setShowEasterEgg(false)}
         >
           <motion.div
-            className="text-center p-8 rounded-xl bg-secondary/80 backdrop-blur-lg border border-purple-500/40 max-w-md"
+            className="bg-secondary/80 backdrop-blur-lg p-8 border border-purple-500/40 rounded-xl max-w-md text-center"
             animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
             <motion.div
-              className="text-8xl mb-4"
+              className="mb-4 text-8xl"
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
             >
               🚀
             </motion.div>
-            <h3 className="text-2xl font-bold mb-2 text-purple-400">
+            <h3 className="mb-2 font-bold text-purple-400 text-2xl">
               You found the Konami Code!
             </h3>
             <p className="text-gray-300">
               Congratulations, you&apos;ve discovered Axole&apos;s secret easter egg! This
               is where all the code magic happens.
             </p>
-            <p className="mt-4 text-sm text-gray-400">
+            <p className="mt-4 text-gray-400 text-sm">
               (Click anywhere to close)
             </p>
           </motion.div>

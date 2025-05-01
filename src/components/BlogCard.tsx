@@ -30,7 +30,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
           <Link
             href={`/blog/${post.slug}`}
             className="group block"
-            scroll={false}
+            prefetch
           >
             <h2 className="mb-4 font-space-grotesk font-bold group-hover:text-purple-400 text-2xl transition-colors">
               {post.title}
@@ -67,7 +67,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
 
           <Link
             href={`/blog/${post.slug}`}
-            scroll={false}
+            prefetch
             className="flex items-center gap-1 font-medium text-purple-400 hover:text-purple-300"
           >
             Continue reading
