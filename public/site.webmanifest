@@ -49,20 +49,20 @@
         "name": "Projects",
         "short_name": "Work",
         "description": "View Axole's development projects",
-        "url": "/projects"
+        "url": "/#projects"
       },
       {
         "name": "Contact",
         "short_name": "Hire",
         "description": "Get in touch with Axole",
-        "url": "/contact"
+        "url": "/#contact"
       }
     ],
     "related_applications": [
       {
-        "platform": "play",
-        "url": "https://play.google.com/store/apps/details?id=com.pipalert.app",
-        "id": "com.pipalert.app"
+        "platform": "play-store",
+        "url": "https://play.google.com/store/apps/details?id=com.axole.pipalert",
+        "id": "om.axole.pipalert"
       }
     ]
   }

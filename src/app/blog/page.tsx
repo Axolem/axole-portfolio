@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   creator: "Axole Maranjana",
   category: "blog",
   title: " Blog",
+  openGraph: {
+    images: [
+      {
+        url: "/blog-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Axole Maranjana - Blog",
+      },
+    ],
+  },
 };
 
 const page = async ({
