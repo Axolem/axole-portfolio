@@ -129,7 +129,7 @@ export const BlogComments: React.FC<BlogCommentsProps> = ({ blogSlug }) => {
 };
 
 const author = "Anonymous";
-const avatar = "/axole-maranjana.jpg";
+const avatar = "/user-placeholder.png";
 
 const CommentLike = ({
   id,
