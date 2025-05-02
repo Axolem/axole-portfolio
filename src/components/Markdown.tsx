@@ -16,17 +16,28 @@ const CodeBlock = ({
   children: string;
 }) => {
   // Extract language from className (format: language-jsx)
-  const language = className ? className.replace("lang-", "") : "javascript";
+  const language = className ? className.replace("lang-", "") : undefined;
+
+  if (!language) {
+    return (
+      <code className="bg-[#1e1e1e] shadow-none px-2 py-1 rounded-md tab-size-4 font-mono text-sky-200 text-sm text-left leading-relaxed whitespace-pre hyphens-none">
+        {children}
+      </code>
+    );
+  }
 
   return (
     <SyntaxHighlighter
-    wrapLongLines
-    showLineNumbers
-    language={language}
-    style={vscDarkPlus}
-    showInlineLineNumbers
-    className="rounded-md font-mono text-sm"
-      >
+      wrapLongLines
+      showLineNumbers={language !== "markdown"}
+      language={language}
+      style={vscDarkPlus}
+      showInlineLineNumbers
+      className="rounded-md font-mono text-sm"
+      lineNumberStyle={{
+        opacity: 0.5,
+      }}
+    >
       {children}
     </SyntaxHighlighter>
   );
@@ -137,7 +148,9 @@ export const MarkdownComponent: React.FC<MarkdownProps> = ({ content }) => {
             component: FileNameBlock,
           },
         },
+        forceBlock: true,
         enforceAtxHeadings: true,
+        // forceInline: true,
       }}
     >
       {content}

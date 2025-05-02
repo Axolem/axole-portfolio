@@ -5,7 +5,15 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["media.licdn.com"],
-  }
+  },
+  experimental: {
+    reactCompiler: true,
+    typedEnv: true,
+    optimizeCss: true,
+    // dynamicIO: true,
+    turbopackTreeShaking: true,
+    serverMinification: true,
+  },
 };
 
 export default nextConfig;

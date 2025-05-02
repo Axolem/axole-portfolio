@@ -28,11 +28,27 @@ Our plugin system consists of four main components:
 
 Let's dive into each component and understand how they work together.
 
+## Folder Structure
+
+```markdown
+📦root
+├── 📂plugins
+│   ├── 📄add-server-info.ts
+│   └── 📄add-timestamp.ts
+├── 📂types
+│   ├── 📄response.ts
+├── 📂utils
+│   ├── 📄plugin-loader.ts
+│   └── 📄response-plugin-execute.ts
+├── 📄index.ts
+```
+
 ## The Plugin Interface
 
 First, we define a `ResponsePlugin` interface that all plugins must implement:
 
 ```typescript
+// types/response.ts
 interface ResponsePlugin {
   name: string;
   onLoad(): void;
@@ -52,6 +68,7 @@ Let's look at two example plugins that demonstrate different use cases:
 ### 1. Server Info Plugin
 
 ```typescript
+// plugins/add-server-info.ts
 const AddServerInfo: ResponsePlugin = {
   name: "add-server-info-plugin",
   onLoad() {
@@ -75,6 +92,7 @@ This plugin adds server information to the response object, useful for debugging
 ### 2. Timestamp Plugin
 
 ```typescript
+// plugins/add-timestamp.ts
 const AddTimestampPlugin: ResponsePlugin = {
   name: "add-timestamp-plugin",
   onLoad() {
@@ -94,6 +112,7 @@ This plugin adds a timestamp to each response, which can be useful for caching o
 The plugin loader is responsible for dynamically loading plugins from the filesystem:
 
 ```typescript
+// utils/plugin-loader.ts
 export const loadPlugins = async (): Promise<ResponsePlugin[]> => {
   const plugins: ResponsePlugin[] = [];
   const pluginsFolder = path.join(process.cwd(), "plugins");
@@ -112,6 +131,30 @@ export const loadPlugins = async (): Promise<ResponsePlugin[]> => {
 };
 ```
 
+Validator
+```typescript
+// utils/plugin-loader.ts
+const validatePlugin = async (pluginPath: string) => {
+  const pluginModule = await import(pluginPath);
+  const plugin: ResponsePlugin = pluginModule.default;
+  try {
+    if (!("name" in plugin)) throw new Error("Plugin name not defined.");
+    if (!("onLoad" in plugin)) throw new Error("Plugin onLoad not defined.");
+    if (!("execute" in plugin)) throw new Error("Plugin execute not defined.");
+
+    plugin.onLoad();
+
+    return plugin;
+  } catch (e) {
+    console.error(
+      `Error loading plugin ${plugin?.name} on file: ${pluginPath}: `,
+      (e as Error).message
+    );
+    process.exit(1);
+  }
+};
+```
+
 The loader:
 1. Reads the plugins directory
 2. Filters for TypeScript and JavaScript files
@@ -123,6 +166,7 @@ The loader:
 The execution of plugins is handled by a simple but powerful executor:
 
 ```typescript
+// utils/response-plugin-execute.ts
 const executeResponsePlugins = async <T>(data: T): Promise<T> => {
   for (const plugin of plugins) {
     data = await plugin.execute(data);
@@ -135,6 +179,30 @@ This executor:
 - Takes any type of data as input
 - Runs each plugin's execute method sequentially
 - Returns the modified data
+
+## Usage with Bun
+
+```typescript
+// index.ts
+import { executeResponsePlugins } from "./utils/response-plugin-execute";
+
+Bun.serve({
+  routes: {
+    "/api/greet/:name/:surname": {
+      GET: async (req) => {
+        // Obviously would validate these
+        const data = {
+          name: req.params.name,
+          surname: req.params.surname,
+        };
+
+        const transformedData = await executeResponsePlugins(data);
+        return Response.json(transformedData);
+      },
+    },
+  },
+});
+```
 
 ## Benefits of This Architecture
 
@@ -164,7 +232,7 @@ You can extend this system further by:
 - Adding plugin lifecycle hooks
 - Creating plugin groups or categories
 
-The complete code for this plugin system is available in the repository, and you can use it as a starting point for your own projects.
+The complete code for this plugin system is available in the [repository](https://github.com/Axolem/http-plugin), and you can use it as a starting point for your own projects.
 
 ## Additional Resources
 
