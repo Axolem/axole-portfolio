@@ -116,8 +116,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = await getPostBySlug((await params).slug);
 
-  console.log("HHHHH: ", post)
-
   if (!post) {
     return {
       title: "Post Not Found",

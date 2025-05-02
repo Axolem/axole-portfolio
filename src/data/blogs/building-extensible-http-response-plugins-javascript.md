@@ -1,5 +1,5 @@
 ---
-slug: "building-extensible-http-response-plugins-typescript"
+slug: "building-extensible-http-response-plugins-javascript"
 title: "Building an Extensible HTTP Response Plugin System with TypeScript"
 date: "2025-05-02"
 excerpt: "Learn how to create a flexible and maintainable plugin system for HTTP responses using Bun and TypeScript, perfect for adding middleware-like functionality to your web applications."
