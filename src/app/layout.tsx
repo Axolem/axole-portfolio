@@ -6,6 +6,7 @@ import { inter } from "./fonts";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { KonamiCode } from "@/components/KonamiCode";
+import { PostHogProvider } from "@/provider/posthog";
 import { FloatingNav } from "@/components/FloatingNav";
 
 const meta = {
@@ -107,11 +108,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen bg-background`}>
-        <KonamiCode />
-        {children}
-        <Footer />
-        <FloatingNav />
-        <Toaster position="top-center" />
+        <PostHogProvider>
+          <KonamiCode />
+          {children}
+          <Footer />
+          <FloatingNav />
+          <Toaster position="top-center" />
+        </PostHogProvider>
       </body>
     </html>
   );
