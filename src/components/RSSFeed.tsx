@@ -3,6 +3,7 @@
 import { toast } from "sonner";
 import { Rss } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import posthog from "posthog-js";
 
 export const RSSFeed = () => {
   const downloadRSS = async () => {
@@ -27,11 +28,13 @@ export const RSSFeed = () => {
       toast.success("RSS Feed Downloaded", {
         description: "The RSS feed has been successfully downloaded.",
       });
+      posthog.capture("download_rss")
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error("Download Failed", {
         description: "There was an error generating the RSS feed.",
       });
+      posthog.capture("download_rss_fail", {error})
     }
   };
 

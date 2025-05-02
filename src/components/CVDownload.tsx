@@ -1,5 +1,6 @@
 "use client";
 
+import posthog from "posthog-js";
 import { Download } from "lucide-react";
 
 export const CVDownload = () => {
@@ -13,12 +14,13 @@ export const CVDownload = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    posthog.capture("download_cv");
   };
 
   return (
     <button
       onClick={handleDownload}
-      className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+      className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg text-white transition-colors"
     >
       <Download size={20} />
       Download CV

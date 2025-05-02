@@ -3,6 +3,7 @@
 import useSWR from "swr";
 import { toast } from "sonner";
 import { useState } from "react";
+import posthog from "posthog-js";
 import { formatDistance } from "date-fns";
 import { MessageSquare, Heart, User, Loader } from "lucide-react";
 
@@ -39,11 +40,13 @@ export const BlogComments: React.FC<BlogCommentsProps> = ({ blogSlug }) => {
         mutate();
         setCommentText("");
         toast.success("Commented successfully");
+        posthog.capture("post_comment", { blogSlug });
       })
       .catch((error) => {
         toast.error("Error commenting", {
           description: (error as Error).message,
         });
+        posthog.capture("post_comment_fail", { blogSlug, error, commentText });
       });
   };
 
@@ -73,7 +76,6 @@ export const BlogComments: React.FC<BlogCommentsProps> = ({ blogSlug }) => {
         <Skeleton className="w-full h-24" />
       ) : (
         <>
-          {" "}
           {comments?.length > 0 ? (
             <div className="space-y-6">
               {comments?.map((comment: PostComment[number]) => (
@@ -148,11 +150,13 @@ const CommentLike = ({
   const onLikeComment = () => {
     if (liked) {
       setLiked(true);
+      posthog.capture("comment_like", { id });
       return;
     }
 
     setLiked(false);
     trigger();
+    posthog.capture("comment_dislike", { id });
   };
 
   return (

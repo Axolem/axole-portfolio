@@ -1,16 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { toast } from "sonner";
 import { useState } from "react";
+import posthog from "posthog-js";
 import { Loader, Mail } from "lucide-react";
 
-import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 export const BlogNewsletter: React.FC = () => {
-
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = async (e: any) => {
@@ -29,16 +29,18 @@ export const BlogNewsletter: React.FC = () => {
       if (response.ok) {
         toast.success(response.text);
         form.reset();
+        posthog.capture("newsletter_subscribe");
       } else {
         toast.error(response.text);
         console.error("Subscription failed");
+        posthog.capture("newsletter_subscribe_error", { error: response.text });
       }
     } catch (error) {
       toast.error("Error submitting form:", {
         description: (error as Error).message,
       });
-      console.error("Error submitting form:", error);
-    }finally{
+      posthog.capture("newsletter_subscribe_error", { error });
+    } finally {
       setIsLoading(false);
     }
   };
@@ -66,7 +68,9 @@ export const BlogNewsletter: React.FC = () => {
           className="flex-1"
           required
         />
-        <Button type="submit" disabled={isLoading}>{isLoading ? <Loader className="animate-spin" /> :"Subscribe"}</Button>
+        <Button type="submit" disabled={isLoading}>
+          {isLoading ? <Loader className="animate-spin" /> : "Subscribe"}
+        </Button>
       </form>
 
       <p className="mt-4 text-gray-400 text-sm text-center">

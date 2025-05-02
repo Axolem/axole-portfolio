@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
+import posthog from "posthog-js";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -33,6 +34,7 @@ export const KonamiCode = () => {
         if (index === konamiCode.length) {
           setShowEasterEgg(true);
           index = 0;
+          posthog.capture("show_konami_code")
 
           // Hide after 5 seconds
           setTimeout(() => {

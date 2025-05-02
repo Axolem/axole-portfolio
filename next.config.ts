@@ -4,7 +4,11 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ["media.licdn.com"],
+    remotePatterns: [
+      {
+        hostname: "**.licdn.com",
+      },
+    ],
   },
   experimental: {
     reactCompiler: true,

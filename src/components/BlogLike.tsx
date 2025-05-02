@@ -1,12 +1,13 @@
 "use client";
 import useSWR from "swr";
 import { useState } from "react";
+import posthog from "posthog-js";
 import useSWRMutation from "swr/mutation";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Heart, Loader } from "lucide-react";
 
 import { Button } from "./ui/button";
-import { Heart, Loader } from "lucide-react";
 import { fetcher, mutator } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const BlogLike = (props: BlogLikeProps) => {
   const { data, isLoading, mutate } = useSWR(
@@ -15,7 +16,7 @@ const BlogLike = (props: BlogLikeProps) => {
   );
   const { trigger, isMutating } = useSWRMutation(
     `/api/post/${props.slug}/like`,
-    mutator,
+    mutator
   );
 
   const [hasLiked, setHasLiked] = useState(false);
@@ -28,6 +29,7 @@ const BlogLike = (props: BlogLikeProps) => {
     }
     setHasLiked(true);
     trigger().then(() => {
+      posthog.capture("blog_like", { blogSlug: props.slug });
       mutate();
     });
   };
