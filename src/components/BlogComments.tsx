@@ -128,7 +128,7 @@ export const BlogComments: React.FC<BlogCommentsProps> = ({ blogSlug }) => {
   );
 };
 
-const author = "Anonyms";
+const author = "Anonymous";
 const avatar = "/axole-maranjana.jpg";
 
 const CommentLike = ({
