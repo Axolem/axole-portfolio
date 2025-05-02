@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   experimental: {
     reactCompiler: true,
     typedEnv: true,
-    optimizeCss: true,
+    // optimizeCss: true, // Causes an error
     // dynamicIO: true,
     turbopackTreeShaking: true,
     serverMinification: true,

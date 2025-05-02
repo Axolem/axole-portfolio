@@ -29,7 +29,6 @@ export const RSSFeed = () => {
         description: "The RSS feed has been successfully downloaded.",
       });
       posthog.capture("download_rss")
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error("Download Failed", {
         description: "There was an error generating the RSS feed.",
