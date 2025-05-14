@@ -47,7 +47,7 @@ Let's dive into each component and understand how they work together.
 
 First, we define a `ResponsePlugin` interface that all plugins must implement:
 
-```typescript
+```typescript title="types/response.ts" {1, 4}
 // types/response.ts
 interface ResponsePlugin {
   name: string;
