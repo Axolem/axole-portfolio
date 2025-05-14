@@ -4,12 +4,12 @@ import RouterLink from "next/link";
 
 export const FloatingNav = () => {
   const navItems = [
-    { label: "Home", href: "#", icon: Home },
-    { label: "Education", href: "#education", icon: GraduationCap },
-    { label: "Experience", href: "#experience", icon: Briefcase },
-    { label: "Interests", href: "#interests", icon: Heart },
+    { label: "Home", href: "/", icon: Home },
+    { label: "Education", href: "/#education", icon: GraduationCap },
+    { label: "Experience", href: "/#experience", icon: Briefcase },
+    { label: "Interests", href: "/#interests", icon: Heart },
     { label: "Blog", href: "/blog", icon: BookOpen },
-    { label: "Contact", href: "#contact", icon: Mail },
+    { label: "Contact", href: "/#contact", icon: Mail },
   ];
 
   return (
