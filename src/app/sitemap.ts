@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/building-extensible-http-response-plugins-javascript`,
-      lastModified: new Date(),
+      lastModified: new Date("02/05/2025"),
       changeFrequency: "monthly",
       priority: 0.7
     },
