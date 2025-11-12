@@ -1,26 +1,26 @@
-import { getPostComments, commentPost } from "@/db/posts";
+import { commentPost, getPostComments } from "@/db/posts";
 
 export const GET = async (
-  req: Request,
-  { params }: { params: Promise<{ slug: string }> }
+	req: Request,
+	{ params }: { params: Promise<{ slug: string }> },
 ) => {
-  const { slug } = await params;
-  const data = await getPostComments(slug);
-  return Response.json({ data });
+	const { slug } = await params;
+	const data = await getPostComments(slug);
+	return Response.json({ data });
 };
 
 export const POST = async (
-  req: Request,
-  { params }: { params: Promise<{ slug: string }> }
+	req: Request,
+	{ params }: { params: Promise<{ slug: string }> },
 ) => {
-  const { slug } = await params;
-  const data = await req.json();
+	const { slug } = await params;
+	const data = await req.json();
 
-  if (!("comment" in data)) {
-    return new Response("No comment.", { status: 400 });
-  }
+	if (!("comment" in data)) {
+		return new Response("No comment.", { status: 400 });
+	}
 
-  await commentPost(slug, data.comment);
+	await commentPost(slug, data.comment);
 
-  return Response.json({ data: { slug } });
+	return Response.json({ data: { slug } });
 };
