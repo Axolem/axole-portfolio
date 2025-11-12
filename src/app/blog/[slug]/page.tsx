@@ -101,12 +101,12 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
 export default page;
 
-export async function generateStaticParams(): Promise<any[]> {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
 	const posts = await getAllPosts();
 
 	return posts?.map((post) => ({
 		slug: post.slug,
-	})) as any;
+	})) as { slug: string }[];
 }
 
 export async function generateMetadata({

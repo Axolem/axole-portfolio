@@ -11,12 +11,11 @@ import { Input } from "@/components/ui/input";
 export const BlogNewsletter: React.FC = () => {
 	const [isLoading, setIsLoading] = useState(false);
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const handleSubmit = async (e: any) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setIsLoading(true);
 
-		const form = e.target;
+		const form = e.target as HTMLFormElement;
 		const formData = new FormData(form);
 
 		try {
