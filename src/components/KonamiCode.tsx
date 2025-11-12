@@ -7,16 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const KonamiCode = () => {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const konamiCode = [
-    "ArrowUp",
-    "ArrowUp",
-    "ArrowDown",
-    "ArrowDown",
-    "ArrowLeft",
-    "ArrowRight",
-    "ArrowLeft",
-    "ArrowRight",
-    "b",
-    "a",
+    "a", "x", "o", "l", "e"
   ];
 
   useEffect(() => {
