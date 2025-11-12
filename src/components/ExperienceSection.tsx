@@ -8,21 +8,48 @@ interface ExperienceItem {
 }
 
 const experiences: ExperienceItem[] = [
+  // {
+  //   title: "Java Developer",
+  //   company: "FirstRand Limited (FNB)",
+  //   location: "Johannesburg, ZA",
+  //   period: "May 2025 - Present",
+  //   description: [
+  //     "Developed and maintained Java applications for the FNB bank",
+  //     "Worked on the FNB bank's forex core banking system",
+  //     "Delivered new functionality to 2 new subsidiaries of the FNB bank in the first 2 months of joining",
+  //     "Groomed requirements for a new product in the FNB bank's forex core banking system",
+  //     "Production support for the FNB bank's forex core banking system"
+  //   ]
+  // },
+  {
+    title: "Full Stack Developer (C# & Angular)",
+    company: "Kilig Software",
+    location: "Johannesburg South, ZA",
+    period: "Mar 2025 - June 2025",
+    description: [
+      "Designed, developed, and maintained a robust C# ASP.NET Core web application, implementing RESTful APIs and optimizing backend performance for high reliability.",
+      "Spearheaded the formulation and integration of comprehensive unit tests for the C# monolith, resulting in improved code coverage, early bug detection, and enhanced maintainability.",
+      "Collaborated closely with the team to architect and deliver new features on the Angular frontend, focusing on UI/UX improvements and effective data management.",
+      "Utilized Agile methodologies, participating in sprint planning and review meetings, as well as code reviews to ensure top coding standards and continuous delivery.",
+    ]
+  },
   {
     title: "Software Quality Engineer Trainee",
     company: "Nedbank Group",
     location: "Johannesburg, ZA",
     period: "Dec 2024 - Feb 2025",
     description: [
-      "Gained hands-on experience in ensuring software quality and compliance through rigorous testing protocols",
-      "Collaborated with cross-functional teams to enhance operational efficiency through data-driven insights"
+      "Applied rigorous manual and automated testing protocols to ensure software quality, compliance, and defect-free product releases.",
+      "Documented test cases, tracked defects, and reported results to development teams, contributing to a 15% reduction in post-release issues.",
+      "Collaborated effectively with cross-functional teams, leveraging data analysis to drive process improvements and operational efficiencies.",
+      "Demonstrated a strong attention to detail and commitment to industry best practices in software quality assurance."
     ]
   },
   {
     title: "Development Software Tutor",
     company: "University of Johannesburg",
-    location: "Johannesburg, SA",
-    period: "Mar 2024 - Nov 2024",
+    location: "Johannesburg, ZA",
+    period: "Feb 2023 - Nov 2024",
     description: [
       "Guided students in mastering software development concepts, improving proficiency in coding, testing, and debugging",
       "Fostered collaboration and innovation through mentorship in data-focused projects"
@@ -31,7 +58,7 @@ const experiences: ExperienceItem[] = [
   {
     title: "Technopreneurship Ambassador",
     company: "University of Johannesburg",
-    location: "Johannesburg, SA",
+    location: "Johannesburg, ZA",
     period: "2022 - 2024",
     description: [
       // "Connected students with industry giants like Microsoft, SAP, and Huawei",

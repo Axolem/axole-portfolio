@@ -18,13 +18,13 @@ const techCategories: TechCategory[] = [
     title: "Programming Languages",
     icon: Code2,
     items: [
-      "C#",
+      "Java (Primary)", "C#",
       "TypeScript/JavaScript",
       "Python",
-      "Go",
+      "Go (Hobby)",
       "HTML/CSS",
       "C++",
-      "Java (Primary)",
+     
       "SQL",
     ],
   },
@@ -51,6 +51,7 @@ const techCategories: TechCategory[] = [
       "Game development",
       "E-commerce",
       "Responsive Web Design",
+      
     ],
   },
   {
