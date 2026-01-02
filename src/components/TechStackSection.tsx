@@ -79,7 +79,19 @@ const techCategories: TechCategory[] = [
 	{
 		title: "Tools & Platforms",
 		icon: Wrench,
-		items: ["Git/GitHub", "npm (bun)", "VS Code", "JetBrains IDEs", "Figma"],
+		items: [
+			"Git/GitHub",
+			"npm (bun)",
+			"VS Code",
+			"JetBrains IDEs",
+			"Figma",
+			"Docker",
+			"Maven",
+			"Jira",
+			"Confluence",
+			"Postman",
+			"Postgres",
+		],
 	},
 ];
 
