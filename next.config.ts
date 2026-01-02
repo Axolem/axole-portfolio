@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
 		// turbopackTreeShaking: true,
 		serverMinification: true,
 	},
+	skipTrailingSlashRedirect: true,
 };
 
 export default nextConfig;
