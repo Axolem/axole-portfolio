@@ -5,20 +5,24 @@ import posthog from "posthog-js";
 import { PostHogProvider as PHProvider, usePostHog } from "posthog-js/react";
 import { Suspense, useEffect } from "react";
 
+const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY as string;
+
 export function PostHogProvider({ children }: { children: React.ReactNode }) {
 	useEffect(() => {
-		posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
-			api_host:
-				process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com",
-			ui_host:
-				process.env.NEXT_PUBLIC_POSTHOG_UI_HOST || "https://eu.posthog.com",
-			person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
-			capture_pageview: false,
-			capture_pageleave: true, // Enable pageleave capture
-			autocapture: true,
-			capture_dead_clicks: true,
-			capture_heatmaps: true,
-		});
+		if (POSTHOG_KEY) {
+			posthog.init(POSTHOG_KEY, {
+				api_host:
+					process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com",
+				ui_host:
+					process.env.NEXT_PUBLIC_POSTHOG_UI_HOST || "https://eu.posthog.com",
+				person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
+				capture_pageview: false,
+				capture_pageleave: true, // Enable pageleave capture
+				autocapture: true,
+				capture_dead_clicks: true,
+				capture_heatmaps: true,
+			});
+		}
 	}, []);
 
 	return (
