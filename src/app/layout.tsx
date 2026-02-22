@@ -10,19 +10,23 @@ import { inter } from "./fonts";
 
 const meta = {
 	title: {
-		default: "Axole Maranjana | Technopreneur & Full-Stack Developer",
+		default: "Axole Maranjana | Software Engineer & Aspiring Architect",
 		template: "%s | Axole Maranjana",
 	},
 	description:
-		"Creator of PipAlert | Open Source Contributor | C# & React Native Specialist | Automating workflows from Johannesburg, South Africa",
+		"Core Banking Developer (Java) & Full-Stack Engineer (TypeScript/Next.js). Specializing in scalable systems, fintech architecture, and high-availability infrastructure in Johannesburg, South Africa.",
 	metadataBase: new URL("https://axole.dotenv.co.za"),
 	keywords: [
-		"Forex App Developer",
-		"React Native Expert",
-		"C# Automation",
-		"South African Technopreneur",
-		"Open Source Contributor",
-		"Power Automate",
+		"Software Architecture",
+		"Java Developer",
+		"Spring Boot",
+		"TypeScript",
+		"Next.js",
+		"System Design",
+		"Fintech Engineering",
+		"Core Banking Systems",
+		"Microservices",
+		"Johannesburg Developer"
 	],
 	creator: "Axole Maranjana",
 	publisher: "Axole Maranjana",
@@ -66,7 +70,7 @@ export const metadata: Metadata = {
 				url: "/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Axole Maranjana - Developer Portfolio",
+				alt: "Axole Maranjana - Software Architecture & Engineering Portfolio",
 			},
 		],
 		locale: "en_ZA",
@@ -92,7 +96,7 @@ export const metadata: Metadata = {
 		},
 	},
 	other: {
-		"msapplication-TileColor": "#1E40AF",
+		"msapplication-TileColor": "#1E40AF", // Keep your branding color
 		"theme-color": "#1E40AF",
 		"apple-mobile-web-app-capable": "yes",
 		"apple-mobile-web-app-status-bar-style": "black-translucent",
