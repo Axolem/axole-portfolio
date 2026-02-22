@@ -2,7 +2,7 @@ import { Code2, Globe, Rocket, Sparkles } from "lucide-react";
 
 export const StorySection = () => {
 	return (
-		<section className="bg-gradient-to-b from-background to-secondary/30 px-6 py-20">
+		<section className="bg-linear-to-b from-background to-secondary/30 px-6 py-20">
 			<div className="mx-auto max-w-6xl">
 				<h2 className="mb-16 font-space-grotesk font-bold text-3xl md:text-4xl text-center">
 					The Story
@@ -16,7 +16,7 @@ export const StorySection = () => {
 								<Sparkles className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
+								<h3 className="bg-clip-text bg-linear-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Spark of Curiosity
 								</h3>
 								<p className="text-gray-300 leading-relaxed">
@@ -38,7 +38,7 @@ export const StorySection = () => {
 								<Rocket className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
+								<h3 className="bg-clip-text bg-linear-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Rise of a Technopreneur
 								</h3>
 								<p className="text-gray-300 leading-relaxed">
@@ -61,7 +61,7 @@ export const StorySection = () => {
 								<Code2 className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
+								<h3 className="bg-clip-text bg-linear-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Open-Source Explorer
 								</h3>
 								<p className="text-gray-300 leading-relaxed">
@@ -81,7 +81,7 @@ export const StorySection = () => {
 								<Globe className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
+								<h3 className="bg-clip-text bg-linear-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Vision Ahead
 								</h3>
 								<p className="text-gray-300 leading-relaxed">

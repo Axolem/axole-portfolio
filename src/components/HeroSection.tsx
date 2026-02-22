@@ -5,7 +5,7 @@ import RouterLink from "next/link";
 import { CVDownload } from "./CVDownload";
 export const HeroSection = () => {
 	return (
-		<section className="relative flex items-center bg-gradient-to-b from-background via-secondary/20 to-background px-6 min-h-screen overflow-hidden">
+		<section className="relative flex items-center bg-linear-to-b from-background via-secondary/20 to-background px-6 min-h-screen overflow-hidden">
 			{/* Subtle background shimmer using Tailwind animations */}
 			<div className="z-0 absolute inset-0 overflow-hidden">
 				<div className="top-1/3 left-1/2 absolute bg-purple-800/5 blur-[120px] rounded-full w-[800px] h-[500px] -translate-x-1/2 animate-pulse-slow" />
@@ -13,7 +13,7 @@ export const HeroSection = () => {
 
 			<div className="z-10 mx-auto w-full max-w-6xl">
 				<div className="flex md:flex-row flex-col items-center md:items-start gap-12">
-					<div className="relative flex-shrink-0 opacity-0 shadow-lg border-4 border-purple-500/20 rounded-full w-40 h-40 overflow-hidden scale-90 animate-fade-in-scale">
+					<div className="relative opacity-0 shadow-lg border-4 border-purple-500/20 rounded-full w-40 h-40 overflow-hidden scale-90 animate-fade-in-scale shrink-0">
 						<Image
 							src="/axole-maranjana.jpg"
 							alt="Axole Maranjana"
@@ -28,7 +28,7 @@ export const HeroSection = () => {
 							<h2 className="opacity-0 font-medium text-purple-400 text-sm md:text-base translate-y-4 animate-fade-in delay-200">
 								Welcome to my digital canvas
 							</h2>
-							<h1 className="bg-clip-text bg-gradient-to-r from-white to-gray-400 opacity-0 font-space-grotesk font-bold text-transparent text-4xl md:text-6xl leading-tight translate-y-4 animate-fade-in delay-300">
+							<h1 className="bg-clip-text bg-linear-to-r from-white to-gray-400 opacity-0 font-space-grotesk font-bold text-transparent text-4xl md:text-6xl leading-tight translate-y-4 animate-fade-in delay-300">
 								Hey, I&apos;m Axole Maranjana
 							</h1>
 						</div>

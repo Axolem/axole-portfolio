@@ -27,6 +27,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency: "monthly",
 			priority: 0.7,
 		},
+		{
+			url: `${baseUrl}/blog?author=Axole%20Maranjana`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=bun`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=typescript`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=plugins`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=architecture`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=web-development`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
 	];
 }
 
