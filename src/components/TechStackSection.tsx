@@ -15,106 +15,54 @@ interface TechCategory {
 
 const techCategories: TechCategory[] = [
 	{
-		title: "Programming Languages",
+		title: "Backend & Core Engineering",
 		icon: Code2,
 		items: [
-			"Java (Primary)",
-			"C#",
-			"TypeScript/JavaScript",
-			"Python",
-			"Go (Hobby)",
-			"HTML/CSS",
-			"C++",
-
-			"SQL",
-		],
-	},
-	{
-		title: "Frameworks & Libraries",
-		icon: GitBranch,
-		items: [
-			"React Native",
-			"Next JS",
-			"Angular",
+			"Java (8, 17, 21, 25)",
+			"Spring Boot",
+			"C# / .NET Core",
 			"Node.js",
-			".NET",
-			"Springboot",
-			"Agile",
-			"CI/CD",
-			"OOP",
+			"Python",
+			"Go",
 		],
 	},
 	{
-		title: "Mobile & Web Development",
-		icon: Smartphone,
-		items: [
-			"Android & IOS Development",
-			"Game development",
-			"E-commerce",
-			"Responsive Web Design",
-		],
+		title: "Frontend & Client Architecture",
+		icon: Smartphone, // Merged web and mobile since you use unified stacks
+		items: ["TypeScript / JavaScript", "Next.js", "Angular", "React Native"],
 	},
 	{
-		title: "Automation & DevOps",
-		icon: Bot,
-		items: [
-			"Microsoft Power Automate",
-			"GitHub Actions",
-			"AI Agent (N8N)",
-			"Selenium",
-		],
-	},
-	{
-		title: "Databases & Cloud",
+		title: "Data Architecture & Storage",
 		icon: Database,
 		items: [
-			"Postgres (👑)",
-			"Firebase/Supabase",
-			"SQL/NoSQL",
+			"PostgreSQL",
 			"Microsoft SQL Server",
-			"Data Analysis",
-			"Data Governance",
+			"Firebase / Supabase",
+			"Data Governance", // Kept this as it's an architectural concern
 		],
 	},
 	{
-		title: "Tools & Platforms",
-		icon: Wrench,
+		title: "DevOps, CI/CD & Automation",
+		icon: Bot,
 		items: [
-			"Git/GitHub",
-			"npm (bun)",
-			"VS Code",
-			"JetBrains IDEs",
-			"Figma",
 			"Docker",
-			"Maven",
-			"Jira",
-			"Confluence",
-			"Postman",
-			"Postgres",
+			"Jenkins",
+			"GitHub Actions",
+			"Git version control",
+			"n8n (Workflow Automation)",
+			"Selenium",
 		],
 	},
 ];
 
 const competencies = [
-	"Problem Solving",
-	"Software Testing",
-	"Technological Adaptability",
-	"Effective Communication",
-	"Team Collaboration",
-	"System Architecture",
-	"Initiative & Learning",
-	"Critical Thinking",
-	"Leadership",
-	"System Engineering",
-	"Project Management",
-	"Attention to Detail",
-	"Time Management",
-	"Analytical Skills",
+	"System Architecture & Design",
+	"Microservices Integration",
 	"Stakeholder Management",
-	"Public Speaking",
-	"Technopreneurship",
-	"Agile/Scrum",
-	"Strong Technical Skills",
+	"Technical Strategy & Roadmapping",
+	"Cross-Functional Leadership",
+	"Agile/Scrum Methodologies",
+	"Software Quality & Test Strategy",
 ];
 
 const floatingTech = [
@@ -130,7 +78,7 @@ const floatingTech = [
 
 export const TechStackSection = () => {
 	return (
-		<section id="skills" className="py-20 px-6 relative overflow-hidden">
+		<section id="skills" className="relative px-6 py-20 overflow-hidden">
 			{/* Floating tech icons (CSS-based subtle animation using animate-pulse) */}
 			{floatingTech.map((tech, i) => (
 				<div
@@ -141,26 +89,26 @@ export const TechStackSection = () => {
 				</div>
 			))}
 
-			<div className="max-w-6xl mx-auto relative z-10">
-				<h2 className="text-3xl md:text-4xl font-bold font-space-grotesk mb-12 text-center">
+			<div className="z-10 relative mx-auto max-w-6xl">
+				<h2 className="mb-12 font-space-grotesk font-bold text-3xl md:text-4xl text-center">
 					Technologies & Skills
 				</h2>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+				<div className="gap-8 grid md:grid-cols-2 lg:grid-cols-3 mb-16">
 					{techCategories.map((category, index) => (
 						<div
 							key={index}
-							className="p-6 rounded-xl bg-secondary/40 backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+							className="bg-secondary/40 backdrop-blur-sm p-6 border border-purple-500/20 hover:border-purple-500/40 rounded-xl transition-all duration-300"
 						>
 							<div className="flex items-center gap-3 mb-4">
 								<category.icon className="text-purple-400" size={24} />
-								<h3 className="text-xl font-bold">{category.title}</h3>
+								<h3 className="font-bold text-xl">{category.title}</h3>
 							</div>
 							<div className="flex flex-wrap gap-2">
 								{category.items.map((item, i) => (
 									<span
 										key={i}
-										className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 text-sm transition-all duration-200 hover:scale-105 hover:bg-purple-500/20"
+										className="bg-purple-500/10 hover:bg-purple-500/20 px-3 py-1 rounded-full text-purple-300 text-sm hover:scale-105 transition-all duration-200"
 									>
 										{item}
 									</span>
@@ -170,14 +118,14 @@ export const TechStackSection = () => {
 					))}
 				</div>
 
-				<h3 className="text-2xl font-bold mb-8 text-center">
+				<h3 className="mb-8 font-bold text-2xl text-center">
 					Core Competencies
 				</h3>
 				<div className="flex flex-wrap justify-center gap-3">
 					{competencies.map((comp, index) => (
 						<span
 							key={index}
-							className="px-4 py-2 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 transition-transform duration-200 hover:scale-105 hover:bg-purple-500/20"
+							className="bg-purple-500/10 hover:bg-purple-500/20 px-4 py-2 border border-purple-500/20 rounded-full text-purple-300 hover:scale-105 transition-transform duration-200"
 						>
 							{comp}
 						</span>

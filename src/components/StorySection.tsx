@@ -2,9 +2,9 @@ import { Code2, Globe, Rocket, Sparkles } from "lucide-react";
 
 export const StorySection = () => {
 	return (
-		<section className="py-20 px-6 bg-gradient-to-b from-background to-secondary/30">
-			<div className="max-w-6xl mx-auto">
-				<h2 className="text-3xl md:text-4xl font-bold font-space-grotesk mb-16 text-center">
+		<section className="bg-gradient-to-b from-background to-secondary/30 px-6 py-20">
+			<div className="mx-auto max-w-6xl">
+				<h2 className="mb-16 font-space-grotesk font-bold text-3xl md:text-4xl text-center">
 					The Story
 				</h2>
 
@@ -16,7 +16,7 @@ export const StorySection = () => {
 								<Sparkles className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Spark of Curiosity
 								</h3>
 								<p className="text-gray-300 leading-relaxed">
@@ -38,14 +38,14 @@ export const StorySection = () => {
 								<Rocket className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Rise of a Technopreneur
 								</h3>
 								<p className="text-gray-300 leading-relaxed">
 									At the University of Johannesburg, I dove deep into innovation
 									as a Technopreneurship Ambassador, bridging the gap between
 									students and industry giants like Microsoft, SAP, and Huawei.
-									But I wasn&apos;t just connecting others—I was building. From
+									But I wasn&apos;t just connecting others-I was building. From
 									PipAlert, my Forex trading app, to publishing npm packages,
 									every project was a step toward making technology more
 									accessible.
@@ -61,11 +61,11 @@ export const StorySection = () => {
 								<Code2 className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Open-Source Explorer
 								</h3>
 								<p className="text-gray-300 leading-relaxed">
-									My GitHub became more than a repository—it became a playground
+									My GitHub became more than a repository-it became a playground
 									for innovation. Contributing to Supabase, creating automation
 									scripts, and sharing knowledge became my way of giving back to
 									the community that helped me grow.
@@ -81,14 +81,14 @@ export const StorySection = () => {
 								<Globe className="text-purple-500" size={32} />
 							</div>
 							<div>
-								<h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+								<h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 font-bold text-transparent text-2xl">
 									The Vision Ahead
 								</h3>
 								<p className="text-gray-300 leading-relaxed">
 									Today, I stand at the intersection of tech, entrepreneurship,
 									and education. My mission is clear: build tools that empower
 									people, mentor aspiring developers, and keep pushing
-									boundaries—one line of code at a time.
+									boundaries-one line of code at a time.
 								</p>
 							</div>
 						</div>

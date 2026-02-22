@@ -2,11 +2,11 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import posthog from "posthog-js";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export const KonamiCode = () => {
 	const [showEasterEgg, setShowEasterEgg] = useState(false);
-	const konamiCode = ["a", "x", "o", "l", "e"];
+	const konamiCode = useMemo(() => ["a", "x", "o", "l", "e"], []);
 
 	useEffect(() => {
 		let index = 0;
@@ -38,7 +38,7 @@ export const KonamiCode = () => {
 
 		document.addEventListener("keydown", keydownHandler);
 		return () => document.removeEventListener("keydown", keydownHandler);
-	}, []);
+	}, [konamiCode]);
 
 	return (
 		<AnimatePresence>

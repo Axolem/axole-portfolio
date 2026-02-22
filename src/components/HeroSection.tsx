@@ -34,9 +34,14 @@ export const HeroSection = () => {
 						</div>
 
 						<p className="opacity-0 text-gray-400 text-lg md:text-xl leading-relaxed translate-y-4 animate-fade-in delay-400">
-							Software Developer, Open Source Contributor & Tech Entrepreneur
-							passionate about building innovative solutions and fostering tech
-							education.
+							Full-stack engineer and fintech developer transitioning into
+							software architecture. Proven track record of designing scalable,
+							high-availability solutions within core banking systems and
+							high-throughput environments. Specialized in bridging robust
+							backend architectures (Java, Spring Boot, C#) with modern,
+							type-safe frontends (Next.js, TypeScript). Passionate about system
+							design, optimizing microservices, and driving technical strategy
+							for mission-critical applications.
 						</p>
 
 						<div className="flex flex-wrap justify-center md:justify-start gap-4 opacity-0 mt-4 translate-y-4 animate-fade-in delay-500">
