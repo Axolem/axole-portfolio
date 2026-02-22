@@ -1,0 +1,96 @@
+cv:
+  name: Axole Maranjana
+  location: Johannesburg, ZA
+  email: axolemar@gmail.com
+  phone: +27681721606
+  website: https://axole.dotenv.co.za
+  social_networks:
+    - network: LinkedIn
+      username: axolemaranjana
+    - network: GitHub
+      username: axolem
+  sections:
+    Summary:
+      - Full-stack engineer and fintech developer transitioning into software architecture. Proven track record of designing scalable, high-availability solutions within core banking systems and high-throughput environments. Specialized in bridging robust backend architectures (Java, Spring Boot, C#) with modern, type-safe frontends (Next.js, TypeScript). Passionate about system design, optimizing microservices, and driving technical strategy for mission-critical applications.
+
+    Experience:
+      - company: FirstRand Limited (FNB)
+        position: Java Developer
+        location: Johannesburg, ZA
+        start_date: 2025-05
+        end_date: present
+        highlights:
+          - Secured the Emerging Star Award within two months of joining by rapidly architecting and delivering core functionality for two new bank subsidiaries.
+          - Engineered and maintained mission-critical Java applications within the forex core banking system, ensuring high availability and seamless transaction processing.
+          - Analyzed technical requirements during grooming sessions and presented system impact findings to align stakeholders, while executing high-stakes production support to resolve critical blockers.
+      - company: Kilig Software
+        position: Full Stack Developer (C# & Angular)
+        location: Johannesburg South, ZA
+        start_date: 2025-03
+        end_date: 2025-06
+        highlights:
+          - Architected and deployed a C# ASP.NET Core backend, building RESTful APIs that optimized processing speed and system reliability.
+          - Drove a complete overhaul of unit testing for the legacy C# monolith, significantly increasing code coverage and heavily reducing production bug leakage.
+          - Delivered complex UI/UX features on an Angular frontend, streamlining data management workflows and improving end-user functionality.
+      - company: Nedbank Group
+        position: Software Quality Engineer Trainee
+        location: Johannesburg, ZA
+        start_date: 2024-12
+        end_date: 2025-02
+        highlights:
+          - Executed rigorous manual and automated testing protocols, directly contributing to a 15% reduction in post-release software defects.
+          - Analyzed test data and tracked defect lifecycles, collaborating with cross-functional development teams to streamline release processes.
+          - Enforced strict compliance and software quality assurance standards to ensure defect-free product rollouts.
+      - company: University of Johannesburg
+        position: Development Software Tutor & Technopreneurship Ambassador
+        location: Johannesburg, ZA
+        start_date: 2022-01
+        end_date: 2024-11
+        highlights:
+          - Facilitated strategic partnerships by connecting students with industry leaders from Microsoft, SAP, and Huawei.
+          - Mentored students in advanced software development, debugging, and testing, tangibly improving cohort pass rates.
+          - Directed student groups in building data-focused technical projects, bridging the gap between theoretical concepts and practical application.
+
+    Technologies & Core Competencies:
+      - label: Backend & Core Engineering
+        details: Java (8, 17, 21, 25), Spring Boot, C# / .NET Core, Node.js, Python, Go
+      - label: Frontend & Client Architecture
+        details: TypeScript, JavaScript, Next.js, Angular, React Native
+      - label: Data Architecture & Storage
+        details: PostgreSQL, Microsoft SQL Server, Firebase, Supabase, Data Governance
+      - label: DevOps, CI/CD & Automation
+        details: Docker, Jenkins, GitHub Actions, Git, n8n, Selenium
+      - label: Architectural Focus
+        details: System Architecture & Design, Microservices Integration, Technical Strategy, Stakeholder Management, Agile/Scrum
+
+    Projects:
+      - name: RescueRadar
+        date: github.com/Catalyst-Crew
+        highlights:
+          - Architected a real-time safety and geospatial tracking system for underground mining operations, utilizing WebSockets to ensure low-latency data transmission.
+          - Engineered the end-to-end system architecture, integrating a cross-platform React/Electron client with an Express.js backend and persistent MySQL storage, deployed on GCP.
+          - Directed technical strategy and established engineering standards, enforcing strict code review protocols and system design patterns.
+          - Secured 1st Place for Overall Project Implementation and Innovation by successfully demonstrating high-availability tracking in constrained network environments.
+      - name: Codee & PipAlert Applications
+        date: 2024 - 2025
+        highlights:
+          - Engineered core backend systems and API integrations for two competitive hackathon applications (notJust Hack), prioritizing rapid deployment and scalable architecture under strict deadlines.
+          - Designed robust database schemas and streamlined frontend-to-backend data flows to ensure application stability during high-volume demonstration periods.
+
+    Education:
+      - institution: University of Johannesburg
+        area: Business Information Technology
+        degree: Advanced Diploma
+        start_date: 2024-02
+        end_date: 2024-11
+        highlights:
+          - "GPA: 80.75"
+          - "Coursework: Human Computer Interaction, Software Testing, Business Analysis, Databases"
+      - institution: University of Johannesburg
+        area: Business Information Technology
+        degree: Diploma
+        start_date: 2021-02
+        end_date: 2023-11
+        highlights:
+          - "GPA: 76.2"
+          - "Awarded #1 for overall project implementation and innovation."

@@ -3,6 +3,7 @@ import Image from "next/image";
 import RouterLink from "next/link";
 
 import { CVDownload } from "./CVDownload";
+import { ButtonGroup } from "./ui/button-group";
 export const HeroSection = () => {
 	return (
 		<section className="relative flex items-center bg-linear-to-b from-background via-secondary/20 to-background px-6 min-h-screen overflow-hidden">
@@ -44,45 +45,47 @@ export const HeroSection = () => {
 							for mission-critical applications.
 						</p>
 
-						<div className="flex flex-wrap justify-center md:justify-start gap-4 opacity-0 mt-4 translate-y-4 animate-fade-in delay-500">
+						<div className="flex flex-wrap justify-center md:justify-start items-center gap-4 opacity-0 mt-4 translate-y-4 animate-fade-in delay-500">
 							<CVDownload />
 
-							<RouterLink
-								href="https://github.com/Axolem"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:bg-purple-500/20 p-2 rounded-full transition-colors"
-								aria-label="GitHub Profile"
-							>
-								<Github
-									size={24}
-									className="text-gray-400 hover:text-purple-400 transition-colors"
-								/>
-							</RouterLink>
+							<ButtonGroup>
+								<RouterLink
+									href="https://github.com/Axolem"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="hover:bg-purple-500/20 px-4 py-2 rounded-full transition-colors"
+									aria-label="GitHub Profile"
+								>
+									<Github
+										size={24}
+										className="text-gray-400 hover:text-purple-400 transition-colors"
+									/>
+								</RouterLink>
 
-							<RouterLink
-								href="https://linkedin.com/in/axolemaranjana"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:bg-purple-500/20 p-2 rounded-full transition-colors"
-								aria-label="LinkedIn Profile"
-							>
-								<Linkedin
-									size={24}
-									className="text-gray-400 hover:text-purple-400 transition-colors"
-								/>
-							</RouterLink>
+								<RouterLink
+									href="https://linkedin.com/in/axolemaranjana"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="hover:bg-purple-500/20 px-4 py-2 rounded-full transition-colors"
+									aria-label="LinkedIn Profile"
+								>
+									<Linkedin
+										size={24}
+										className="text-gray-400 hover:text-purple-400 transition-colors"
+									/>
+								</RouterLink>
 
-							<RouterLink
-								href="mailto:axolemaranjana4@gmail.com"
-								className="hover:bg-purple-500/20 p-2 rounded-full transition-colors"
-								aria-label="Email Contact"
-							>
-								<Mail
-									size={24}
-									className="text-gray-400 hover:text-purple-400 transition-colors"
-								/>
-							</RouterLink>
+								<RouterLink
+									href="mailto:axolemaranjana4@gmail.com"
+									className="hover:bg-purple-500/20 px-4 py-2 rounded-full transition-colors"
+									aria-label="Email Contact"
+								>
+									<Mail
+										size={24}
+										className="text-gray-400 hover:text-purple-400 transition-colors"
+									/>
+								</RouterLink>
+							</ButtonGroup>
 						</div>
 					</div>
 				</div>

@@ -2,6 +2,8 @@
 
 import { Download } from "lucide-react";
 import posthog from "posthog-js";
+import { Button } from "./ui/button";
+import { ButtonGroup } from "./ui/button-group";
 
 export const CVDownload = () => {
 	const handleDownload = () => {
@@ -17,13 +19,28 @@ export const CVDownload = () => {
 		posthog.capture("download_cv");
 	};
 
+	const handleDownloadJson = () => {
+		const cvUrl = "/cv.json";
+		const link = document.createElement("a");
+		link.href = cvUrl;
+		link.download = "Axole_Maranjana_CV.json";
+		link.target = "_blank";
+		link.rel = "noopener noreferrer";
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+		posthog.capture("download_cv_json");
+	};
+
 	return (
-		<button
-			onClick={handleDownload}
-			className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg text-white transition-colors"
-		>
-			<Download size={20} />
-			Download CV
-		</button>
+		<ButtonGroup>
+			<Button onClick={handleDownload}>
+				<Download size={20} />
+				Download CV (PDF)
+			</Button>
+			<Button variant="outline" onClick={handleDownloadJson}>
+				JSON
+			</Button>
+		</ButtonGroup>
 	);
 };

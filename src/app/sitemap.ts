@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.7,
 		},
 		{
+			url: `${baseUrl}/blog/architecting-enterprise-multi-tenant-saas-part-1`,
+			lastModified: new Date("02/22/2026"),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
 			url: `${baseUrl}/blog?author=Axole%20Maranjana`,
 			lastModified: new Date(),
 			changeFrequency: "monthly",

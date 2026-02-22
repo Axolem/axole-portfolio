@@ -8,7 +8,7 @@ Welcome to the source code of my personal portfolio website showcasing my projec
 
 ## 🚀 Features
 
-- **Modern Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
+- **Modern Stack**: Built with Next.js 16, TypeScript, and Tailwind CSS
 - **Performance Optimized**: 95+ Lighthouse score
 - **PWA Ready**: Installable as a progressive web app
 - **SEO Optimized**: Next.js Metadata API integration
@@ -20,7 +20,7 @@ Welcome to the source code of my personal portfolio website showcasing my projec
 ## 🛠️ Tech Stack
 
 **Frontend:**
-- Next.js 15 (App Router)
+- Next.js 16 (App Router)
 - React 19
 - TypeScript
 - Tailwind CSS
@@ -29,5 +29,3 @@ Welcome to the source code of my personal portfolio website showcasing my projec
 **Backend & Tools:**
 - Vercel Hosting
 
-
-## 📂 Project Structure
