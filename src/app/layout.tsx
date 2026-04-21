@@ -14,7 +14,7 @@ const meta = {
 		template: "%s | Axole Maranjana",
 	},
 	description:
-		"Core Banking Developer (Java) & Full-Stack Engineer (TypeScript/Next.js). Specializing in scalable systems, fintech architecture, and high-availability infrastructure in Johannesburg, South Africa.",
+		"Core Banking Developer (Java) & Full-Stack Engineer (TypeScript/Next.js). Specializing in scalable systems, fintech architecture, high-availability infrastructure, and financial systems engineering in Johannesburg, South Africa. Writing on software engineering, investing, and quantitative finance.",
 	metadataBase: new URL("https://axole.dotenv.co.za"),
 	keywords: [
 		"Software Architecture",
@@ -26,7 +26,15 @@ const meta = {
 		"Fintech Engineering",
 		"Core Banking Systems",
 		"Microservices",
-		"Johannesburg Developer"
+		"Johannesburg Developer",
+		"Dividend Investing",
+		"JSE Dividend Stocks",
+		"Business Development Companies",
+		"South African Investing",
+		"Passive Income South Africa",
+		"Portfolio Construction",
+		"Quantitative Finance",
+		"BDC Stocks",
 	],
 	creator: "Axole Maranjana",
 	publisher: "Axole Maranjana",

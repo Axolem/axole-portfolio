@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.7,
 		},
 		{
+			url: `${baseUrl}/blog/global-dividend-portfolio-high-yield-income-strategy`,
+			lastModified: new Date("04/21/2026"),
+			changeFrequency: "monthly",
+			priority: 0.8,
+		},
+		{
 			url: `${baseUrl}/blog?author=Axole%20Maranjana`,
 			lastModified: new Date(),
 			changeFrequency: "monthly",
@@ -68,6 +74,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=investing`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=dividends`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=personal-finance`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/blog?tag=south-africa`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
+		},
+		{
+			url: `${baseUrl}/Strategic Asset Allocation and Global Dividend Optimization_ Architecting a High-Yield Income Portfolio for Maximum Capital Efficiency.pdf`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 1,
 		},
 	];
 }
