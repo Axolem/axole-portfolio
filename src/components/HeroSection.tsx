@@ -1,6 +1,7 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 import RouterLink from "next/link";
+import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 
 import { CVDownload } from "./CVDownload";
 import { ButtonGroup } from "./ui/button-group";
@@ -56,7 +57,7 @@ export const HeroSection = () => {
 									className="hover:bg-purple-500/20 px-4 py-2 rounded-full transition-colors"
 									aria-label="GitHub Profile"
 								>
-									<Github
+									<GithubIcon
 										size={24}
 										className="text-gray-400 hover:text-purple-400 transition-colors"
 									/>
@@ -69,7 +70,7 @@ export const HeroSection = () => {
 									className="hover:bg-purple-500/20 px-4 py-2 rounded-full transition-colors"
 									aria-label="LinkedIn Profile"
 								>
-									<Linkedin
+									<LinkedinIcon
 										size={24}
 										className="text-gray-400 hover:text-purple-400 transition-colors"
 									/>

@@ -44,6 +44,78 @@ const PERSON_SCHEMA = {
 	image: "https://axole.dotenv.co.za/axole-maranjana.jpg",
 };
 
+const WEBSITE_SCHEMA = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: "Axole Maranjana",
+	alternateName: "Axole Maranjana | Software Engineer & Aspiring Architect",
+	url: "https://axole.dotenv.co.za",
+	author: {
+		"@type": "Person",
+		name: "Axole Maranjana",
+	},
+	potentialAction: {
+		"@type": "SearchAction",
+		target: {
+			"@type": "EntryPoint",
+			urlTemplate: "https://axole.dotenv.co.za/blog?tag={search_term_string}",
+		},
+		"query-input": "required name=search_term_string",
+	},
+};
+
+const NAVIGATION_SCHEMA = {
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	name: "Axole Maranjana — Key Pages",
+	itemListElement: [
+		{
+			"@type": "SiteLinksSearchBox",
+			url: "https://axole.dotenv.co.za",
+		},
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Blog",
+			description:
+				"Technical writing on software architecture, Java, TypeScript, fintech engineering, and dividend investing.",
+			url: "https://axole.dotenv.co.za/blog",
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Projects",
+			description:
+				"Featured projects including PipAlert (forex trading app), payment gateway libraries, and automation tools.",
+			url: "https://axole.dotenv.co.za/#projects",
+		},
+		{
+			"@type": "ListItem",
+			position: 3,
+			name: "Experience",
+			description:
+				"Professional experience at FirstRand (FNB), Kilig Software, and Nedbank Group.",
+			url: "https://axole.dotenv.co.za/#experience",
+		},
+		{
+			"@type": "ListItem",
+			position: 4,
+			name: "Download CV",
+			description:
+				"Download Axole Maranjana's full professional CV / résumé as a PDF.",
+			url: "https://axole.dotenv.co.za/axole-maranjana-cv.pdf",
+		},
+		{
+			"@type": "ListItem",
+			position: 5,
+			name: "Contact",
+			description:
+				"Get in touch with Axole Maranjana via LinkedIn, GitHub, or email.",
+			url: "https://axole.dotenv.co.za/#contact",
+		},
+	],
+};
+
 const meta = {
 	title: {
 		default: "Axole Maranjana | Software Engineer & Aspiring Architect",
@@ -159,6 +231,18 @@ export default function RootLayout({
 					id="person-schema"
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_SCHEMA) }}
+				/>
+				<Script
+					id="website-schema"
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
+				/>
+				<Script
+					id="navigation-schema"
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(NAVIGATION_SCHEMA),
+					}}
 				/>
 			</head>
 			<body className={`${inter.className} min-h-screen bg-background`}>

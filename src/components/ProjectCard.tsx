@@ -1,4 +1,5 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { GithubIcon } from "@/components/icons/BrandIcons";
 import {
 	HoverCard,
 	HoverCardContent,
@@ -55,7 +56,7 @@ ProjectCardProps) => {
 							rel="noopener noreferrer"
 							className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
 						>
-							<Github size={20} />
+							<GithubIcon size={20} />
 							<span>Code</span>
 						</a>
 					)}

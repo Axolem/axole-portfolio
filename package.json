@@ -25,7 +25,7 @@
 		"drizzle-orm": "^0.45.2",
 		"framer-motion": "^12.38.0",
 		"gray-matter": "^4.0.3",
-		"lucide-react": "1.0.0",
+		"lucide-react": "1.8.0",
 		"markdown-to-jsx": "^9.7.16",
 		"next": "16.2.4",
 		"next-themes": "^0.4.6",
@@ -54,11 +54,5 @@
 		"core-js",
 		"esbuild",
 		"sharp"
-	],
-	"overrides": {
-		"lucide-react": "1.0.0"
-	},
-	"resolutions": {
-		"lucide-react": "1.0.0"
-	}
+	]
 }

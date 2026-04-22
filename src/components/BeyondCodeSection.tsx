@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { Book, User, Youtube } from "lucide-react";
+import { Book, User } from "lucide-react";
+import { YoutubeIcon } from "@/components/icons/BrandIcons";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface Influencer {
@@ -80,7 +81,7 @@ export const BeyondCodeSection = () => {
 						viewport={{ once: true }}
 					>
 						<div className="flex items-center gap-3 mb-6">
-							<Youtube className="text-purple-400" size={24} />
+							<YoutubeIcon className="text-purple-400" size={24} />
 							<h3 className="text-2xl font-bold">
 								Tech Influencers I Follow on YouTube
 							</h3>

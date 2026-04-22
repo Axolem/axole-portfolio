@@ -1,10 +1,11 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import Link from "next/link";
 import { BeyondCodeSection } from "@/components/BeyondCodeSection";
 import { DayLifeSection } from "@/components/DayLifeSection";
 import { EducationSection } from "@/components/EducationSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { HeroSection } from "@/components/HeroSection";
+import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import { ProjectCard } from "@/components/ProjectCard";
 import { StorySection } from "@/components/StorySection";
 import { TechStackSection } from "@/components/TechStackSection";
@@ -88,7 +89,7 @@ export default function HomePage() {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Github
+								<GithubIcon
 									size={16}
 									className="hidden group-hover:block mr-1 transition-all duration-700"
 								/>
@@ -104,7 +105,7 @@ export default function HomePage() {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Linkedin
+								<LinkedinIcon
 									size={16}
 									className="hidden group-hover:block mr-1 transition-all duration-700"
 								/>
