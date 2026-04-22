@@ -5,8 +5,25 @@ import { getAllPosts, type Post } from "@/lib/blog";
 export const metadata: Metadata = {
 	creator: "Axole Maranjana",
 	category: "blog",
-	title: " Blog",
+	title: "Blog",
+	description:
+		"Technical writing by Axole Maranjana on software architecture, Java, Spring Boot, TypeScript, Next.js, fintech engineering, dividend investing, and quantitative finance.",
+	keywords: [
+		"Axole Maranjana blog",
+		"software architecture blog",
+		"Java developer blog",
+		"fintech engineering",
+		"dividend investing South Africa",
+		"TypeScript tutorials",
+	],
+	alternates: {
+		canonical: "/blog",
+	},
 	openGraph: {
+		type: "website",
+		title: "Blog | Axole Maranjana",
+		description:
+			"Technical writing on software architecture, Java, TypeScript, fintech, and investing by Axole Maranjana.",
 		images: [
 			{
 				url: "/blog-og.png",

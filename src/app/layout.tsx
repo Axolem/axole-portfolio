@@ -1,12 +1,48 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
+import Script from "next/script";
 import { FloatingNav } from "@/components/FloatingNav";
 import { Footer } from "@/components/Footer";
 import { KonamiCode } from "@/components/KonamiCode";
 import { Toaster } from "@/components/ui/sonner";
 import { PostHogProvider } from "@/provider/posthog";
 import { inter } from "./fonts";
+
+const PERSON_SCHEMA = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: "Axole Maranjana",
+	url: "https://axole.dotenv.co.za",
+	sameAs: [
+		"https://linkedin.com/in/axolemaranjana",
+		"https://github.com/Axolem",
+		"https://x.com/axole_ma",
+		"https://www.npmjs.com/~axolema",
+	],
+	jobTitle: "Software Engineer & Aspiring Architect",
+	worksFor: {
+		"@type": "Organization",
+		name: "FirstRand Limited (FNB)",
+	},
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Johannesburg",
+		addressCountry: "ZA",
+	},
+	knowsAbout: [
+		"Java",
+		"Spring Boot",
+		"TypeScript",
+		"Next.js",
+		"Software Architecture",
+		"Fintech Engineering",
+		"Core Banking Systems",
+		"Microservices",
+		"Dividend Investing",
+	],
+	image: "https://axole.dotenv.co.za/axole-maranjana.jpg",
+};
 
 const meta = {
 	title: {
@@ -87,7 +123,7 @@ export const metadata: Metadata = {
 	twitter: {
 		...meta,
 		card: "summary_large_image",
-		creator: "@axole_mar",
+		creator: "@axole_ma",
 		images: ["/twitter-og.png"],
 	},
 	robots: {
@@ -98,9 +134,9 @@ export const metadata: Metadata = {
 			index: true,
 			follow: true,
 			noimageindex: false,
-			"max-video-preview": 1,
+			"max-video-preview": -1,
 			"max-image-preview": "large",
-			"max-snippet": 1,
+			"max-snippet": -1,
 		},
 	},
 	other: {
@@ -118,6 +154,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<Script
+					id="person-schema"
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_SCHEMA) }}
+				/>
+			</head>
 			<body className={`${inter.className} min-h-screen bg-background`}>
 				<PostHogProvider>
 					<KonamiCode />

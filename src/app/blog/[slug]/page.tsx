@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
 import { BlogAuthor } from "@/components/BlogAuthor";
 import { BlogComments } from "@/components/BlogComments";
@@ -12,6 +13,8 @@ import { BlogNewsletter } from "@/components/BlogNewsletter";
 import { Markdown } from "@/components/Markdown";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { formatDate } from "@/lib/formatDate";
+
+const BASE_URL = "https://axole.dotenv.co.za";
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 	const slug = (await params).slug;
@@ -29,8 +32,42 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 		);
 	}
 
+	const postUrl = `${BASE_URL}/blog/${post.slug}`;
+	const ogImage = post.ogImage?.url ?? "/blog-og.png";
+
+	const articleSchema = {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		headline: post.title,
+		description: post.excerpt.substring(0, 155),
+		image: `${BASE_URL}${ogImage}`,
+		datePublished: post.date,
+		dateModified: post.date,
+		url: postUrl,
+		author: {
+			"@type": "Person",
+			name: post.author.name,
+			url: `${BASE_URL}${post.author.url ?? "/"}`,
+		},
+		publisher: {
+			"@type": "Person",
+			name: "Axole Maranjana",
+			url: BASE_URL,
+		},
+		keywords: post.keywords.join(", "),
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": postUrl,
+		},
+	};
+
 	return (
 		<div className="relative bg-background -mt-24 md:-mt-12 min-h-screen">
+			<Script
+				id="article-schema"
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+			/>
 			<BackgroundEffects />
 
 			<article className="px-6 pt-32 pb-20">
@@ -122,10 +159,40 @@ export async function generateMetadata({
 		};
 	}
 
+	const postUrl = `${BASE_URL}/blog/${post.slug}`;
+	const ogImage = post.ogImage?.url ?? "/blog-og.png";
+
 	return {
-		title: `${post.title}`,
-		description: post.excerpt.substring(0, 155), // Ensure it's within 160 characters
+		title: post.title,
+		description: post.excerpt.substring(0, 155),
 		authors: [{ name: post.author.name, url: post.author.url }],
 		keywords: [...post.keywords],
+		alternates: {
+			canonical: `/blog/${post.slug}`,
+		},
+		openGraph: {
+			type: "article",
+			url: postUrl,
+			title: post.title,
+			description: post.excerpt.substring(0, 155),
+			publishedTime: post.date,
+			authors: [post.author.name],
+			tags: post.tags,
+			images: [
+				{
+					url: ogImage,
+					width: 1200,
+					height: 630,
+					alt: post.title,
+				},
+			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			creator: "@axole_ma",
+			title: post.title,
+			description: post.excerpt.substring(0, 155),
+			images: [ogImage],
+		},
 	};
 }

@@ -6,13 +6,9 @@ export default function robots(): MetadataRoute.Robots {
 			{
 				userAgent: "*",
 				allow: ["/"],
-				crawlDelay: 10,
-			},
-			{
-				userAgent: ["ChatGPT-User", "GPTBot"],
-				disallow: ["/"],
 			},
 		],
 		sitemap: "https://axole.dotenv.co.za/sitemap.xml",
+		host: "https://axole.dotenv.co.za",
 	};
 }

@@ -1,7 +1,7 @@
 {
-	"name": "Axole Maranjana | Technopreneur & Full-Stack Developer",
+	"name": "Axole Maranjana | Software Engineer & Aspiring Architect",
 	"short_name": "AxoleM",
-	"description": "Portfolio of Axole Maranjana - C# & React Native Developer | PipAlert Creator | Automation Specialist | Open-Source Contributor",
+	"description": "Portfolio of Axole Maranjana — Java Developer at FNB, Full-Stack Engineer (TypeScript/Next.js), and aspiring Software Architect specializing in fintech, core banking systems, and scalable web applications.",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",
@@ -46,6 +46,12 @@
 	],
 	"shortcuts": [
 		{
+			"name": "Blog",
+			"short_name": "Blog",
+			"description": "Read Axole's technical articles on software architecture and investing",
+			"url": "/blog"
+		},
+		{
 			"name": "Projects",
 			"short_name": "Work",
 			"description": "View Axole's development projects",
@@ -62,7 +68,7 @@
 		{
 			"platform": "play-store",
 			"url": "https://play.google.com/store/apps/details?id=com.axole.pipalert",
-			"id": "om.axole.pipalert"
+			"id": "com.axole.pipalert"
 		}
 	]
 }

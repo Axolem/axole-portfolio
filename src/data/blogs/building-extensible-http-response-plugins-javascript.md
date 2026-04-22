@@ -9,7 +9,8 @@ author:
   name: "Axole Maranjana"
   image: "/axole-maranjana.jpg"
   url: "/"
-ogImage: 
+ogImage:
+  url: "/blog-og.png"
 keywords: ["bun", "typescript", "plugins", "middleware", "http", "web development", "architecture", "design patterns"]
 ---
 

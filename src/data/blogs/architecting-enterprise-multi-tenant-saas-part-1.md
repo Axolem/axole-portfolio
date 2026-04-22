@@ -9,7 +9,8 @@ author:
   name: "Axole Maranjana"
   image: "/axole-maranjana.jpg"
   url: "/"
-ogImage: 
+ogImage:
+  url: "/blog-og.png"
 keywords: ["java", "spring boot", "multi-tenant", "race condition", "pessimistic locking", "architecture", "postgresql"]
 ---
 

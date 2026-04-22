@@ -47,11 +47,13 @@ System Architecture & Design, Microservices Integration, Technical Strategy & Ro
 - [Axole Maranjana | Full CV / Resume](https://axole.dotenv.co.za/axole-maranjana-cv.pdf): PDF download of professional experience and architectural metrics.
 
 ## Technical Blog & Documentation
-- [Blog Home](https://axole.dotenv.co.za/blog): Technical writing on system design and scalable applications.
+- [Blog Home](https://axole.dotenv.co.za/blog): Technical writing on system design, scalable applications, and financial engineering.
 - [Articles by Axole Maranjana](https://axole.dotenv.co.za/blog?author=Axole%20Maranjana)
 
 ### Featured Deep Dives
-- [Building Extensible HTTP Response Plugins in JavaScript](https://axole.dotenv.co.za/blog/building-extensible-http-response-plugins-javascript): Technical guide on modular system design and extensibility.
+- [Building Extensible HTTP Response Plugins in JavaScript](https://axole.dotenv.co.za/blog/building-extensible-http-response-plugins-javascript): Technical guide on modular system design and extensibility using Bun and TypeScript.
+- [Building an Enterprise Multi-Tenant SaaS: Architecture & Concurrency (Part 1)](https://axole.dotenv.co.za/blog/architecting-enterprise-multi-tenant-saas-part-1): How to architect a secure multi-tenant Java REST API and solve high-concurrency race conditions using pessimistic locking.
+- [Strategic Asset Allocation & Global Dividend Optimization: Architecting a High-Yield Income Portfolio](https://axole.dotenv.co.za/blog/global-dividend-portfolio-high-yield-income-strategy): Data-driven framework for building a globally diversified dividend portfolio targeting ZAR 20,000/month in passive income, covering JSE, US BDCs, ASX, and European equities.
 
 ### Topics & Tag Index
 - [Software Architecture](https://axole.dotenv.co.za/blog?tag=architecture)
@@ -59,3 +61,7 @@ System Architecture & Design, Microservices Integration, Technical Strategy & Ro
 - [Bun Runtime](https://axole.dotenv.co.za/blog?tag=bun)
 - [Plugin Architecture](https://axole.dotenv.co.za/blog?tag=plugins)
 - [Web Development](https://axole.dotenv.co.za/blog?tag=web-development)
+- [Dividend Investing](https://axole.dotenv.co.za/blog?tag=dividends)
+- [Personal Finance](https://axole.dotenv.co.za/blog?tag=personal-finance)
+- [South Africa Investing](https://axole.dotenv.co.za/blog?tag=south-africa)
+- [Java & Spring Boot](https://axole.dotenv.co.za/blog?tag=java)
