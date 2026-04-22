@@ -31,8 +31,11 @@ export const HeroSection = () => {
 								Welcome to my digital canvas
 							</h2>
 							<h1 className="bg-clip-text bg-linear-to-r from-white to-gray-400 opacity-0 font-space-grotesk font-bold text-transparent text-4xl md:text-6xl leading-tight translate-y-4 animate-fade-in delay-300">
-								Hey, I&apos;m Axole Maranjana
+								Axole Maranjana
 							</h1>
+							<p className="opacity-0 font-medium text-purple-300 text-base md:text-lg translate-y-4 animate-fade-in delay-350">
+								Software Engineer & Aspiring Architect · Johannesburg, ZA
+							</p>
 						</div>
 
 						<p className="opacity-0 text-gray-400 text-lg md:text-xl leading-relaxed translate-y-4 animate-fade-in delay-400">
@@ -53,7 +56,7 @@ export const HeroSection = () => {
 								<RouterLink
 									href="https://github.com/Axolem"
 									target="_blank"
-									rel="noopener noreferrer"
+									rel="me noopener noreferrer"
 									className="hover:bg-purple-500/20 px-4 py-2 rounded-full transition-colors"
 									aria-label="GitHub Profile"
 								>
@@ -66,7 +69,7 @@ export const HeroSection = () => {
 								<RouterLink
 									href="https://linkedin.com/in/axolemaranjana"
 									target="_blank"
-									rel="noopener noreferrer"
+									rel="me noopener noreferrer"
 									className="hover:bg-purple-500/20 px-4 py-2 rounded-full transition-colors"
 									aria-label="LinkedIn Profile"
 								>

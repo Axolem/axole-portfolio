@@ -25,7 +25,7 @@ const experiences: ExperienceItem[] = [
 		period: "Mar 2025 - June 2025",
 		description: [
 			"Architected and deployed a C# ASP.NET Core backend, building RESTful APIs that optimized processing speed and system reliability.",
-			"Drove a complete overhaul of unit testing for the legacy C# monolith, increasing code coverage by [Percentage]% and heavily reducing production bug leakage.",
+			"Drove a complete overhaul of unit testing for a legacy C# monolith, significantly increasing code coverage and reducing production bug leakage.",
 			"Delivered complex UI/UX features on an Angular frontend, streamlining data management workflows and improving end-user functionality.",
 		],
 	},
@@ -46,7 +46,7 @@ const experiences: ExperienceItem[] = [
 		location: "Johannesburg, ZA",
 		period: "Feb 2023 - Nov 2024",
 		description: [
-			"Mentored [Number] students in advanced software development, debugging, and testing, tangibly improving cohort pass rates.",
+			"Mentored students in advanced software development, debugging, and testing, tangibly improving cohort pass rates.",
 			"Directed student groups in building data-focused technical projects, bridging the gap between theoretical concepts and practical application.",
 		],
 	},
@@ -57,7 +57,7 @@ const experiences: ExperienceItem[] = [
 		period: "2022 - 2024",
 		description: [
 			"Facilitated strategic partnerships by connecting students with industry leaders from Microsoft, SAP, and Huawei.",
-			"Advised and mentored [Number] aspiring tech entrepreneurs, guiding them from initial ideation to technical execution.",
+			"Advised and mentored aspiring tech entrepreneurs, guiding them from initial ideation to technical execution.",
 		],
 	},
 ];
@@ -70,9 +70,9 @@ export const ExperienceSection = () => {
 					Experience
 				</h2>
 				<div className="space-y-12">
-					{experiences.map((exp, index) => (
+					{experiences.map((exp) => (
 						<div
-							key={index}
+							key={`${exp.company}-${exp.title}`}
 							className="relative pl-8 border-purple-200 border-l-2"
 						>
 							<div className="top-0 -left-[9px] absolute bg-purple-600 rounded-full w-4 h-4" />
@@ -82,7 +82,7 @@ export const ExperienceSection = () => {
 							<div className="mb-4 text-gray-400 text-sm">{exp.location}</div>
 							<ul className="space-y-2">
 								{exp.description.map((item, i) => (
-									<li key={i} className="text-gray-600">
+									<li key={i} className="text-gray-300">
 										• {item}
 									</li>
 								))}

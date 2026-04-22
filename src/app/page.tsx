@@ -87,7 +87,7 @@ export default function HomePage() {
 							<Link
 								href="https://github.com/Axolem"
 								target="_blank"
-								rel="noopener noreferrer"
+								rel="me noopener noreferrer"
 							>
 								<GithubIcon
 									size={16}
@@ -103,7 +103,7 @@ export default function HomePage() {
 							<Link
 								href="https://linkedin.com/in/axolemaranjana"
 								target="_blank"
-								rel="noopener noreferrer"
+								rel="me noopener noreferrer"
 							>
 								<LinkedinIcon
 									size={16}

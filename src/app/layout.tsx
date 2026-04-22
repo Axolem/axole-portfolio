@@ -146,6 +146,7 @@ const meta = {
 	],
 	creator: "Axole Maranjana",
 	publisher: "Axole Maranjana",
+	authors: [{ name: "Axole Maranjana", url: "https://axole.dotenv.co.za" }],
 	applicationName: "Axole Maranjana Portfolio",
 	category: "Technology",
 };
@@ -156,6 +157,9 @@ export const metadata: Metadata = {
 		canonical: "/",
 		languages: {
 			"en-ZA": "/en-ZA",
+		},
+		types: {
+			"application/rss+xml": "/api/rss.xml",
 		},
 	},
 	icons: {

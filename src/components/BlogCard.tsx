@@ -9,7 +9,7 @@ import { BlogAuthor } from "./BlogAuthor";
 export const BlogCard = ({ post }: BlogCardProps) => {
 	return (
 		<article
-			aria-label={post.slug}
+			aria-label={post.title}
 			className="bg-secondary/10 p-6 border border-purple-500/20 hover:border-purple-500/40 rounded-xl transition-all"
 		>
 			<div className="flex md:flex-row flex-col gap-6">
@@ -53,10 +53,9 @@ export const BlogCard = ({ post }: BlogCardProps) => {
 								}}
 								passHref
 								key={tag}
+								className="bg-secondary/20 hover:bg-purple-500/20 px-3 py-1 rounded-full text-gray-300 hover:text-purple-300 text-sm transition-colors cursor-pointer"
 							>
-								<button className="bg-secondary/20 hover:bg-purple-500/20 px-3 py-1 rounded-full text-gray-300 hover:text-purple-300 text-sm transition-colors cursor-pointer">
-									{tag}
-								</button>
+								{tag}
 							</Link>
 						))}
 					</div>
